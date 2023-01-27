@@ -16,7 +16,7 @@ https://hls.youtb.workers.dev/channel/UCBi2mrWuNuyYy4gbM6fU18Q.m3u8
 
 Using Video ID(example: w_Ma8oQLmSM)
 NOTE: This will only play LIVE streams using 'video id'.
-      This is useful for channels having more than one live stream.
+      This is useful with channels having more than one live stream.
 # format of the link
 https://hls.youtb.workers.dev/video/{youtube_video_id}.m3u8
 # example
