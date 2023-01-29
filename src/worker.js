@@ -22,20 +22,20 @@ async function getLiveStream(url) {
 }
 
 async function handleRequest(request) {
-  const { pathname } = new URL(request.url)
-  if (pathname.startsWith('/@')) {
-    // supported api /channel/:id.m3u8
-    const channel = pathname.split('@')[1]
+	const { pathname } = new URL(request.url)
+	if (pathname.startsWith('/@')) {
+		// supported api /@:id.m3u8
+		const channel = pathname.split('@')?.[1]?.split('.')?.[0]
 
-    if (channel !== '') {
-      const url = `https://www.youtube.com/@${channel}/live`
-      const stream = await getLiveStream(url)
-      return Response.redirect(stream, 302)
-    } else {
-      throw Error(`Channel ID not found: ${pathname}`)
-    }
-  } else if (pathname.startsWith('/channel/')) {
-    // supported api /channel/:id.m3u8
+		if (channel !== '') {
+			const url = `https://www.youtube.com/@${channel}/live`
+			const stream = await getLiveStream(url)
+			return Response.redirect(stream, 302)
+		} else {
+			throw Error(`Channel ID not found: ${pathname}`)
+		}
+	} else if (pathname.startsWith('/channel/')) {
+		// supported api /channel/:id.m3u8
     const channel = pathname.split('/')?.[2]?.split('.')?.[0]
 
     if (channel !== '') {
