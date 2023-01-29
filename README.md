@@ -4,7 +4,7 @@ It creates a permanent link for the live feed (HLS/m3u8) of a Youtube channel. I
 ```bash
 Using Channel '@' Name(example: @ABCNews)
 # format of the link
-https://hls.youtb.workers.dev/channel/{youtube_@_name}.m3u8
+https://hls.youtb.workers.dev/{youtube_@name}.m3u8
 # example
 https://hls.youtb.workers.dev/@ABCNews.m3u8
 
