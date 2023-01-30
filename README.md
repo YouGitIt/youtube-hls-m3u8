@@ -1,5 +1,6 @@
 # Youtube HLS
 It creates a permanent link for the live feed (HLS/m3u8) of a Youtube channel. It picks up the most recent live feed when the channel has multiple live feeds.
+Save the code in 'src/worker.js' to a Cloudflare Worker.
 
 ```bash
 Using Channel '@' Name(example: @ABCNews)
